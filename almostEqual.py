@@ -1,17 +1,14 @@
 
 
-
-	
-
 def almost_equal(first , second):
 	if len(first) < len(second):
 		first, second = second , first
 
 	len_diff = len(first) -len(second)
-
+#need to find diffrence in length for the algo
 	if len_diff > 1 :
 		return False
-
+#checking which character has changed, finding the index and checking if the string after that is equal
 	elif len_diff == 0 :
 
 		if first == second:
@@ -32,7 +29,7 @@ def almost_equal(first , second):
 
 		else:
 			return False
-
+#checking which character/characters have changed, removing the first changed character then comparing the remaining string
 	elif len_diff == 1:
 	
 		for i  in range(0,len(second)):
